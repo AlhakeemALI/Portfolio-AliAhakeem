@@ -8,13 +8,13 @@ const Profile = () => {
           <div className='profile-details'>
              <div className='colz'>
                   <div className='colz-icon'>
-                     <a href='https://www.linkedin.com/in/ali-al-hakeem/'>
+                     <a target="_blank" href='https://www.linkedin.com/in/ali-al-hakeem/'>
                            <i className='fa fa-linkedin-square'></i>
                      </a>
-                     <a href='https://github.com/AlhakeemALI'>
+                     <a target="_blank"  href='https://github.com/AlhakeemALI'>
                            <i className='fa fa-github-square'></i>
                      </a>
-                  </div>
+                  </div> 
              </div>
               <div className='profile-details-name'>
                       <span className='primary-text'>
@@ -32,11 +32,11 @@ const Profile = () => {
                                     steps={
                                            [
                                                 "Full-Stack Software Engineer 🔴",
-                                                1000,
+                                                2000,
                                                 "Python🐍",
-                                                1000,
-                                                "React/React Native Dev 📱",
-                                                1000,
+                                                2000,
+                                                "React📱",
+                                                2000,
                                           ] 
                                     }
                                           wrapper="p"
@@ -53,7 +53,7 @@ const Profile = () => {
                                     Hire Me
                                     </button>
                                     <a href='AliAlhakeem.pdf' download='AliAlhakeem.pdf'>
-                                          <button className='btn highted-btn'> Get Resume</button>
+                                          <button className='btn highlighted-btn'> Get Resume</button>
                                     </a>
                               </div>
                </div>
