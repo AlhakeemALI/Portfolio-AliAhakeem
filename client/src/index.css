@@ -107,16 +107,15 @@ body ::-webkit-scrollbar-thumb {
 } */
  
 .primary-btn:hover {
-  color: aliceblue;
-  border: 2px solid #007c77;
-  background-color: #1f2235;
+  background-color:linen;
+  border: 2px solid #4c3b4d;
 }
  
 .highlighted-btn {
   color: var(--white);
- 
   font-size: 12px;
   background-color: #007c77;
+  border: 2px solid var(--white);
 }
 @media only screen and (max-width: 568px) {
   .highlighted-btn {
