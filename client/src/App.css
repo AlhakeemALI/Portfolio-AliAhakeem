@@ -9,12 +9,14 @@
   --orange: #F57F17;
   --dark-orange: #FF5823;
   --orange-shadow: rgba(245, 127, 23,0.2);
-  --white: #ffffff;
+  --white: #fdfff7;
   --black: #333333;
   --disabled-btn: #09bead7a;
   --error-message:  #e44f4fd1;
   --toast-error: #e44f4ffa;
   --toast-shadow:  #9c9c9ce3;
   --toast-success: #0CBFAE;
-  --loader-color: #0CBFAE
+  --loader-color: #0CBFAE;
+  --dark-teal: #007c77;
+  --light-teal:#a2e2e0
 }
