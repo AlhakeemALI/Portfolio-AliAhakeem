@@ -5,7 +5,7 @@ justify-content: center;
 text-align: center;
 height: 10%;
 min-height: fit-content;
-background-image: url('../../assets/Home/ali-background.jpg')
+background-image: url('../../../assets/Home/ali-background.jpg')
 }
 
 .profile-parent {
@@ -74,7 +74,7 @@ border-radius: 50%;
 .profile-picture-background {
 height: 95%;
 width: 955%;
-background-image: url('../../assets/Home/ali_sea-green.png');
+background-image: url('../../../assets/Home/ali_sea-green.png');
 background-size: cover;
 border-radius: 50%;
 background-repeat: no-repeat;
