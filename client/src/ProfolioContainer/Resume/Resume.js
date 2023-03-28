@@ -22,9 +22,12 @@ const Resume = (props) => {
     return (
       <div className="resume-heading">
         <div className="resume-main-heading">
+           
           <div className="heading-bullet"></div>
           <span>{props.heading ? props.heading : ""}</span>
+   
           {props.fromDate && props.toDate ? (
+            
             <div className="heading-date">
               {props.fromDate + "-" + props.toDate}
             </div>
@@ -64,6 +67,7 @@ const Resume = (props) => {
     { skill: "HTML", ratingPercentage: 100},
     { skill: "CSS", ratingPercentage: 100 },
     { skill: "SASS", ratingPercentage: 100 },
+    { skill: "Bootstrap", ratingPercentage: 100 },
   ];
 
   const projectsDetails = [
@@ -72,8 +76,10 @@ const Resume = (props) => {
       duration: { fromDate: "2021", toDate: "2021" },
       description:
         "Online shop sample that offers features such as products, shopping carts, an option to leave reviews on products, and checkout",
-      subHeading: "Built with ExpressJS, NodeJS, MongoDB and Mongoose Database, with EJS,Passport."
+      subHeading: "Built with ExpressJS, NodeJS, MongoDB and Mongoose Database, with EJS,Passport.",
+     
     },
+   
     {
       title: "StackDevHelp",
       duration: { fromDate: "2022", toDate: "2022" },
@@ -81,6 +87,7 @@ const Resume = (props) => {
         "This is a friendly & simplified clone of StackOverflow",
       subHeading:
         "built with ReactJS, NodeJS,ExpressJS, MongoDB, Mongoose, Styled-Components, and MaterialUI.",
+        
     },
     {
       title: "Simon Game",
@@ -89,6 +96,7 @@ const Resume = (props) => {
         " It's a web app version of the Digital Simon game. The program chooses a sequence of colors and makes the player repeat the same sequence to advance to the next round",
       subHeading:
         "Built with Vanilla JavaScript, HTML & CSS grid system",
+       
     },
   ];
 
