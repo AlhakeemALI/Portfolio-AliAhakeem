@@ -1,71 +1,68 @@
-import React, {useState} from 'react'
-import './ContactMe.css'
+import React, { useState } from "react";
+import Typical from "react-typical";
+import axios from "axios";
+import { toast } from "react-toastify";
+
+import imgBack from "../../../src/images/send-email.jpg";
+import load1 from "../../../src/images/load2.gif";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
-import imgBack from '../../../src/images/send-email.jpg'
-import load1 from '../../../src/images/load2.gif'
-import Typical from 'react-typical'
-import axios from 'axios';
-import {toast } from 'react-toastify';
+
+import "./ContactMe.css";
 
 export default function ContactMe(props) {
   let fadeInScreenHandler = (screen) => {
-    if(screen.fadeInScreen !== props.id)
-    return
-    Animations.animations.fadeInScreen(props.id)
-  }
-  const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler)
+    if (screen.fadeInScreen !== props.id) return;
+    Animations.animations.fadeInScreen(props.id);
+  };
 
+  const fadeInSubscription =
+    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
-  const [name,setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [massage,setMassage] = useState('')
-  const [banner, setBanner] = useState('')
-  const [bool,setBool] = useState(false)
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [banner, setBanner] = useState("");
+  const [bool, setBool] = useState(false);
 
-
-  const handleName = (e)=>{
-    setName(e.target.value)
-  }
-
+  const handleName = (e) => {
+    setName(e.target.value);
+  };
   const handleEmail = (e) => {
-    setEmail(e.target.value)
-  }
-
-  const handleMassage = (e) => {
-    setMassage(e.target.value)
-  }
-
-
-  const submitForm = async(e) => {
-    e.preventDefault()
+    setEmail(e.target.value);
+  };
+  const handleMessage = (e) => {
+    setMessage(e.target.value);
+  };
+  console.log(name);
+  const submitForm = async (e) => {
+    e.preventDefault();
     try {
-
       let data = {
         name,
         email,
-        massage
+        message,
+      };
+      setBool(true);
+      const res = await axios.post(`/contact`, data);
+      if (name.length === 0 || email.length === 0 || message.length === 0) {
+        setBanner(res.data.msg);
+        toast.error(res.data.msg);
+        setBool(false);
+      } else if (res.status === 200) {
+        setBanner(res.data.msg);
+        toast.success(res.data.msg);
+        setBool(false);
+
+        setName("");
+        setEmail("");
+        setMessage("");
       }
-        setBool(true)
-        const res = await axios.post(`/contact`, data)
-        if(name.length === 0 || email.length === 0 || massage.length === 0) {
-          setBanner(res.data.msg)
-          toast.error(res.data.msg)
-          setBool(false)
-        } else if (res.status === 200) {
-          setBanner(res.data.msg)
-          toast.success(res.data.msg)
-          setBool(false)
-        }
-
-        
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-
-    
-  }
+  };
 
 
 
@@ -118,8 +115,8 @@ export default function ContactMe(props) {
 
                              <label htmlFor='message'>Message</label>
                              <textarea type='text'
-                             onChange={handleMassage}
-                             value={massage}
+                             onChange={handleMessage}
+                             value={message}
                              />
 
                              <div className='send-btn'>
