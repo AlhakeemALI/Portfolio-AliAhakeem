@@ -1,5 +1,5 @@
 import React from 'react'
-import Typical from 'react-typical'
+
 import './Profile.css'
 import ScrollService from "../../../utilities/ScrollService";
 
@@ -28,21 +28,8 @@ const Profile = () => {
                         <span className='primary-text'>
                               {" "}
                               <h1>
-                                    {" "}
-                                    <Typical
-                                    loop={Infinity}
-                                    steps={
-                                           [
-                                                "Full-Stack Software Engineer 🔴",
-                                                2000,
-                                                "Python🐍",
-                                                2000,
-                                                "React📱",
-                                                2000,
-                                          ] 
-                                    }
-                                          wrapper="p"
-                                    />
+                              Full-Stack Software Engineer
+                        
                               </h1>
                                     <span className='profile-role-tagline'>
                                             Full-Stack Developer passionate about creative problem-solving.
