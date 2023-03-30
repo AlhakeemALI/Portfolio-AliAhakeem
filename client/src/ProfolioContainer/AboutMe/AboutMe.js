@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect } from 'react'
+
 import './AboutMe.css'
 import ScreenHeading from '../../utilities/ScreenHeading/ScreenHeading'
 import ScrollService from '../../utilities/ScrollService'
@@ -63,7 +63,7 @@ export default function AboutMe(props) {
                                 {""}    
                                     Hire Me{""}
                                     </button>
-                                    <a href='AliAlhakeem.pdf' download='AliAlhakeem.pdf'>
+                                    <a href='Ali Al Hakeem Resume.pdf' download='Ali Al Hakeem Resume.pdf'>
                                           <button className='btn highlighted-btn'> Get Resume</button>
                                     </a>
                     </div>
