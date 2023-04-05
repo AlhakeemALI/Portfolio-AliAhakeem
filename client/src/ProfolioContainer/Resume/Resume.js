@@ -107,6 +107,7 @@ const Resume = (props) => {
         subHeading={"Software Engineering Immersive Graduate "}
         fromDate={"2021"}
         toDate={"2022"}
+        // github={"https://portfoliopro.herokuapp.com/"}
       />
 
       <ResumeHeading
@@ -261,7 +262,6 @@ const Resume = (props) => {
               <div className="bullets">{getBullets()}</div>
             </div>
           </div>
-
           <div className="resume-bullet-details">{getResumeScreens()}</div>
         </div>
       </div>
